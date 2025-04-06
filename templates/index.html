@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Acne Detection</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Acne Detection & Skincare Recommendations</h1>
+        <p>Upload an image of your face to detect skin problems and get personalized recommendations.</p>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <label for="imageInput" id="chooseImageButton" class="custom-file-upload">
+                Choose Image
+            </label>
+            <input type="file" id="imageInput" name="file" accept="image/*" required>
+            <button type="submit" id="analyzeButton" disabled>Analyze My Skin</button>
+        </form>
+        <div id="preview">
+            <img id="previewImage" src="#" alt="Preview Image" style="display: none;">
+        </div>
+        <div id="result" class="hidden">
+            <h2>Analysis Results:</h2>
+            <div id="problems"></div>
+            <div id="recommendations"></div>
+            <img id="outputImage" src="" alt="Annotated Image" style="display: none;">
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
